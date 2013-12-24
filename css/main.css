@@ -1,0 +1,229 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
+
+
+
+body {
+    color: #222;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* ===============
+    ALL
+   =============== */
+
+html, body, h1, h2, h3, h4, h5 {
+    font: 1em  "Lato", Helvetica, "Helvetica Neue", Arial;
+    font-weight: 200;
+
+}
+
+/* * * * HEADER  * * * */
+
+.header-container {
+
+    text-transform: lowercase;
+    position:fixed;
+    top: 0px;
+    border-bottom:1px solid #033;
+    width:100%;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+header {
+    font-size:1.2em;
+    width:100%;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 0 0;
+    display:inline-block;
+    float:left;
+    text-align:right;
+    width:33.3%;
+}
+
+nav {
+    float:left;
+    width:66.6%;
+}
+nav ul {
+    width:100%;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+nav ul li {
+    padding:0 0 0 2.5%;
+    display: inline-block;
+}
+nav ul li img {
+    width:80%;
+    position:relative;
+    top:2px;
+    opacity: 0.55;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color:#aaa;
+}
+
+/* * * * CONTENT  * * * */
+
+.container {
+    margin-top:50px;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 485px) {
+
+    header {
+        width:100%;
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1140px) {}
+
+
+
+/* ==========================================================================
+
+   Helper classes
+
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
