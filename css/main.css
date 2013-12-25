@@ -1,13 +1,12 @@
 
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
 
 
 
 body {
     color: #222;
-    font-size: 1.2em;
+    font-size: 12px;
     line-height: 1.4;
 }
 
@@ -25,11 +24,16 @@ body {
     ALL
    =============== */
 
-html, body, h1, h2, h3, h4, h5 {
+html, body, h1.title {
     font: 1em  "Lato", Helvetica, "Helvetica Neue", Arial;
     font-weight: 200;
-
+    color:#333;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {font-weight: 400; }
 
 /* * * * HEADER  * * * */
 
@@ -40,9 +44,10 @@ html, body, h1, h2, h3, h4, h5 {
     top: 0px;
     border-bottom:1px solid #033;
     width:100%;
-    padding-top: 8px;
+    padding-top: 9px;
     padding-bottom: 10px;
 }
+
 header {
     font-size:1.2em;
     width:100%;
@@ -57,10 +62,16 @@ header {
     width:33.3%;
 }
 
+.title:hover {
+    color:#0a8;
+    -webkit-transition: color 0.2s linear;
+}
+
 nav {
     float:left;
     width:66.6%;
 }
+
 nav ul {
     width:100%;
     padding: 0 0;
@@ -68,9 +79,10 @@ nav ul {
 }
 
 nav ul li {
-    padding:0 0 0 2.5%;
+    padding:0 0 0 2%;
     display: inline-block;
 }
+
 nav ul li img {
     width:80%;
     position:relative;
@@ -82,15 +94,74 @@ nav ul li a {
     color: #333;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     color:#aaa;
+    font-weight:200;
+    -webkit-transition: color 0.2s linear;
 }
 
 /* * * * CONTENT  * * * */
 
-.container {
-    margin-top:50px;
+.container {}
+
+.slide {
+    border-bottom:1px solid #000;
 }
+
+.container > div {
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* * * * HERO / WELCOME  * * * */
+
+.welcome {
+    font-size:2em;
+    padding-top:25px;
+    background-color:#fff;
+}
+
+.welcome .hero h1 {
+
+    margin:0 0;
+    color: #004;
+    font-size:1.5;
+    font-weight:400;
+}
+.welcome .hero p {
+    margin:0 0;
+    line-height: 0.9em;
+
+    font-weight:200;
+}
+
+img.me {
+    background-color: #fff;
+    padding:10px 10px;
+    border: 1px solid #000;
+    border-radius:50%;
+    width:30%;
+    height: 30%;
+}
+
+
+/* * * * Portfolio  * * * */
+
+.portfolio {}
+
+.portfolio .item {
+    border-bottom: 1px solid #aaa;
+}
+
+.portfolio .item img {
+    width:250px;
+    height:250px;
+    margin: 16px 16px;
+    padding:16px 16px;
+}
+
 
 /* ===============
     ALL: IE Fixes
@@ -111,11 +182,44 @@ nav ul li a:hover {
         width:100%;
         font-size: 1.5em;
     }
+    html {
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+    }
+    .welcome {
+        font-size: 3em;
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+    }
+    .container > div {
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+}
 }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
 
-@media only screen and (min-width: 1140px) {}
+    html {
+        font-size:1.2em;
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+    }
+    .welcome {
+        font-size: 4em;
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+    .welcome {
+        font-size: 4.5em;
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+    }
+}
 
 
 
@@ -125,6 +229,14 @@ nav ul li a:hover {
 
    ========================================================================== */
 
+
+.pull-left {
+    float:left;
+
+}
+.pull-right {
+    float:right;
+}
 .ir {
     background-color: transparent;
     border: 0;

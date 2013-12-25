@@ -24,20 +24,30 @@
                     <h1 class="title">Rory Duncan</h1>
                     <nav>
                         <ul>
-                            <li><img src="img/sep1.png"></li>
-                            <li><a href="#">About</a></li>
-                            <li><img src="img/sep1.png"></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><img src="img/sep1.png"></li>
+                            <li><img src="img/sep1.png" /></li>
+                            <li><a href="#welcome">About</a></li>
+                            <li><img src="img/sep1.png" /></li>
                             <li><a href="#">Blog</a></li>
+                            <li><img src="img/sep1.png" /></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </header>
             </div>
 
-            <div class="container">
-                <div class="main wrapper clearfix">
-
+            <div id="welcome" class="container slide welcome">
+                <div  class="hero">
+                    <h1>Hi,</h1>
+                    <!-- force a break between "coffee" and "and" -->
+                    <p>I&nbsp;like&nbsp;coffee and&nbsp;web&nbsp;development.</p>
+                </div>
+            </div>
+            <div class="container slide">
+                <div class="portfolio clearfix">
+                    <div class="item">
+                        <img src="img/me.jpg" />
+                    </div>
+                </div>
 
                 </div> <!-- #main -->
             </div> <!-- #main-container -->
@@ -48,11 +58,13 @@
                 </footer>
             </div>
         </div>
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src="js/main.js"></script>
         <!--
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-        <script src="js/main.js"></script>
+        
         
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
