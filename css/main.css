@@ -196,7 +196,7 @@ h5 {font-weight: 400; }
         
     .work {
         color:#088;
-        background: url("../img/work-header.png") -10% 0% no-repeat #fff;
+        background: url("../img/work-header.png") -2em 0 repeat-x #fff;
         background-size: 1600px 600px;
     }
 
