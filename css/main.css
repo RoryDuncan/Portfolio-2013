@@ -37,17 +37,18 @@ h5 {font-weight: 400; }
 
 /* * * * HEADER  * * * */
 
-.header-container {
-    z-index:99999;
-    background-color: #fff;
-    text-transform: lowercase;
-    position:fixed;
-    top: 0px;
-    border-bottom:1px solid #033;
-    width:100%;
-    padding-top: 9px;
-    padding-bottom: 10px;
-}
+    .header-container {
+        z-index:99999;
+        background-color: #fff;
+        text-transform: lowercase;
+        position:fixed;
+        top: 0px;
+        border-bottom:1px solid #033;
+        width:100%;
+        padding-top: 9px;
+        padding-bottom: 10px;
+    }
+
 /* * * * NAVBAR  * * * */
 
     header {
@@ -194,6 +195,8 @@ h5 {font-weight: 400; }
         font-size: 1.3em;
         font-weight:300;
         color: #555;
+        -webkit-transition: height 1s linear;
+        -moz-transition: height 1s linear;
     }
 
     .work ul li:not(.active) > div:not(.title) {
@@ -205,22 +208,20 @@ h5 {font-weight: 400; }
     }
 
     .work ul li:hover > div:not(.title),
-    .work ul li .active {
-        display:block !important;
+    .work ul li.active > div:not(.title) {
+        display:block;
+
     }
 
     .work ul li:hover > .title {
         color:#000;
-        border-bottom:1px solid #ddd;
     }
 
     .work ul li > .description {
         color: #4aa;
-
         padding:20px 20px;
     }
     .work ul li > div:not(.title):after {
-        
         padding:2px 2px;
         content: attr(class);
         font-size:0.35;
@@ -230,7 +231,6 @@ h5 {font-weight: 400; }
     }
 
     .work ul li > div.title:after {
-        
         padding:2px 2px;
         content: attr(data-year);
         font-weight:100;
@@ -476,17 +476,13 @@ h5 {font-weight: 400; }
         color:#000;
     }
 
-
-/* * * ALL: IE Fixes * * */
+/* * * IE Fixes * * */
 
     .ie7 .title {
         padding-top: 20px;
     }
 
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
+/* * * * MEDIA QUERIES  * * * */
 
 @media only screen and (min-width: 485px) {
 
@@ -510,6 +506,11 @@ h5 {font-weight: 400; }
     }
     .contact ul li:not(.block) {
         display:inline-block;
+    }
+
+    .work ul li {
+        -webkit-transition: height 1s linear;
+        -moz-transition: height 0.2s linear;
     }
 }
 
