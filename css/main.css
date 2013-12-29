@@ -48,83 +48,86 @@ h5 {font-weight: 400; }
     padding-top: 9px;
     padding-bottom: 10px;
 }
+/* * * * NAVBAR  * * * */
 
-header {
-    font-size:1.2em;
-    width:100%;
-    margin: 0 auto;
-}
+    header {
+        font-size:1.2em;
+        width:100%;
+        margin: 0 auto;
+    }
 
-h1.title {
-    margin: 0 0;
-    display:inline-block;
-    float:left;
-    text-align:right;
-    width:33.3%;
-}
+    h1.title {
+        margin: 0 0;
+        display:inline-block;
+        float:left;
+        text-align:right;
+        width:33.3%;
+    }
 
-h1.title a,
-h1.title a:visited  {
-    color:#333;
-    text-decoration: none;
-}
+    h1.title a,
+    h1.title a:visited  {
+        color:#333;
+        text-decoration: none;
+    }
 
-h1.title a:hover {
-    color:#0a8;
-    -webkit-transition: color 0.2s linear;
-}
+    h1.title a:hover {
+        color:#0a8;
+        -webkit-transition: color 0.2s linear;
+    }
 
-nav {
-    float:left;
-    width:66.6%;
-}
+    nav {
+        float:left;
+        width:66.6%;
+        overflow: visible;
+        white-space: nowrap;
+    }
 
-nav ul {
-    width:100%;
-    padding: 0 0;
-    margin: 0 0;
-}
+    nav ul {
+        width:100%;
+        padding: 0 0;
+        margin: 0 0;
+    }
 
-nav ul li {
-    padding:0 0 0 2%;
-    display: inline-block;
-}
+    nav ul li {
+        padding:0 0 0 2%;
+        display: inline-block;
+    }
 
-nav ul li img {
-    width:80%;
-    position:relative;
-    top:2px;
-    opacity: 0.55;
-}
+    nav ul li img {
+        width:80%;
+        position:relative;
+        top:2px;
+        opacity: 0.55;
+    }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-}
+    nav ul li a {
+        color: #333;
+        text-decoration: none;
+    }
 
-nav ul li a:hover {
-    color:#aaa;
-    font-weight:200;
-    -webkit-transition: color 0.2s linear;
-}
+    nav ul li a:hover {
+        color:#aaa;
+        font-weight:200;
+        -webkit-transition: color 0.2s linear;
+    }
 
-/* * * * CONTENT  * * * */
+/* * * * GENERAL  * * * */
 
-.container {}
+    .container {}
 
-.slide {}
+    .slide {}
 
-.slide h1 {
-    font-size:4em;
-    font-weight:100;
-}
-.container > div {
-    width:100%;
-    margin-left:auto;
-    margin-right:auto;
-}
+    .slide h1 {
+        font-size:4em;
+        font-weight:100;
+    }
+    .container > div {
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-/* * * * HERO / WELCOME  * * * */
+/* * * * WELCOME  * * * */
 
     .welcome {
         font-size:2em;
@@ -145,16 +148,12 @@ nav ul li a:hover {
         font-weight:200;
     }
 
-/* * * * Portfolio  * * * */
+/* * * * WORK  * * * */
         
     .work {
         color:#088;
         background: url("../img/work-header.png") -10% 0% no-repeat #fff;
         background-size: 1600px 600px;
-        /*background-size: cover;*/
-    }
-    .work > div {
-
     }
 
     .work > div.clearfix > h1 {
@@ -204,15 +203,17 @@ nav ul li a:hover {
     .work ul li:hover {
         border:1px solid #000;
     }
+
     .work ul li:hover > div:not(.title),
-    .work ul li .active
-    {
+    .work ul li .active {
         display:block !important;
     }
+
     .work ul li:hover > .title {
         color:#000;
         border-bottom:1px solid #ddd;
     }
+
     .work ul li > .description {
         color: #4aa;
 
@@ -240,17 +241,20 @@ nav ul li a:hover {
     .work ul li div.links {
         color: #aaa;
     }
+
     .work ul li > div a {
         color:#08f;
     }
+
     .work ul li > div a:visited {
         color: #07a;
     }
+
     .work ul li > div a:hover {
         color:#059;
     }
 
-/* * * * Skills  * * * */
+/* * * * SKILLS  * * * */
 
     .skills {
         background-color: #255;
@@ -325,16 +329,16 @@ nav ul li a:hover {
     .w100 {width:97% !important;font-weight:900;}
 
     /* display */
-     .w10:before { content:"10%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w20:before { content:"20%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w30:before { content:"30%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w40:before { content:"40%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w50:before { content:"50%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w60:before { content:"60%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w70:before { content:"70%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w80:before { content:"80%";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w90:before { content:"90%";position:relative; left:50%; top:15px; font-size:0.75em;}
-    .w100:before { content:"100%";position:relative;left:50%; top:15px; font-size:0.75em;}
+     .w10:before { content:"1/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w20:before { content:"2/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w30:before { content:"3/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w40:before { content:"4/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w50:before { content:"5/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w60:before { content:"6/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w70:before { content:"7/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w80:before { content:"8/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w90:before { content:"9/10";position:relative; left:50%; top:15px; font-size:0.75em;}
+    .w100:before { content:"10/10";position:relative;left:50%; top:15px; font-size:0.75em;}
 
     ul li:hover .w10,
     ul li:hover .w20,
