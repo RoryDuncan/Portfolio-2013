@@ -52,49 +52,92 @@ h5 {font-weight: 400; }
 /* * * * NAVBAR  * * * */
 
     header {
-        font-size:1.2em;
+        font-size:1.5em;
         width:100%;
         margin: 0 auto;
     }
 
     h1.title {
         margin: 0 0;
-        display:inline-block;
-        float:left;
-        text-align:right;
-        width:33.3%;
+        display:block;
+        text-align:left;
+        width:100%;
     }
 
     h1.title a,
     h1.title a:visited  {
-        color:#333;
+
+        color:#000;
         text-decoration: none;
     }
 
     h1.title a:hover {
         color:#0a8;
-        -webkit-transition: color 0.2s linear;
     }
 
     nav {
-        float:left;
-        width:66.6%;
-        overflow: visible;
-        white-space: nowrap;
+
     }
 
+    nav .menu {
+        position:fixed;
+        top:3px;
+        right:3px;
+        border:1px solid #666;
+        background-color: #fff;
+        margin-right:10px;
+        border-radius:3px;
+        width:35px;
+        height: 30px;
+        padding:3px 3px;
+    }
+
+    nav > .active {
+        background-color:#eee !important;
+        border:1px solid #fff;
+    }
+
+
+    nav .menu:hover {
+        cursor:pointer;
+    }
+
+    nav .menu:active {
+        background-color: #f5f5f5;
+    }
+
+    nav .menu > .bar{
+        width:65%;
+        height:0px;
+        border:2px solid #000;
+        border-radius: 1px;
+        display:block;
+        margin: 14% auto;
+    }
+    
     nav ul {
+        background-color:#eee;
+        display: none;
         width:100%;
         padding: 0 0;
         margin: 0 0;
     }
 
     nav ul li {
-        padding:0 0 0 2%;
-        display: inline-block;
+        text-align:center;
+        display: block;
+    }
+    nav ul li:nth-of-type(2n) {
+        font-size:1.4em;
+        padding: 15px 15px;
+        margin: 1px 0 1px 0;
+        background-color: #fff;
+        border-bottom:1px solid #ddd;
+
     }
 
     nav ul li img {
+        display: none;
         width:80%;
         position:relative;
         top:2px;
@@ -181,7 +224,6 @@ h5 {font-weight: 400; }
         color: #666;
         padding: 0 0;
         margin: 2% 2% 0 0;
-        
     }
 
 
@@ -195,8 +237,6 @@ h5 {font-weight: 400; }
         font-size: 1.3em;
         font-weight:300;
         color: #555;
-        -webkit-transition: height 1s linear;
-        -moz-transition: height 1s linear;
     }
 
     .work ul li:not(.active) > div:not(.title) {
@@ -531,7 +571,19 @@ h5 {font-weight: 400; }
     .contact ul li:not(.block) {
         display:inline-block;
     }
+    
+    /* * MENU MAGIC * */
 
+    h1.title {width:33.3%; text-align:right;}
+    h1.title,
+    nav { display:inline-block; float:left;}
+    nav .menu { display:none;}
+    nav { width:66.6%;}
+    /* mini reset */
+    nav ul,
+    nav ul li,
+    nav ul li:nth-of-type(2n) { font-size:1em; display:inline-block; background-color: transparent; border: none; padding: 0 0;}
+    nav ul li img {display:inline-block;}
 
 }
 

@@ -7,8 +7,8 @@ $(document).ready(
           w = $(window).width(),
           toggleActive = function(e) {
           	$(e.currentTarget).toggleClass("active");
-
-      	};
+          };
+      	
 
       slide = $('.slide');
       nav = $('div.header-container');
@@ -24,6 +24,22 @@ $(document).ready(
 
 
       $(".work ul.expandable li").on("click", toggleActive);
+      $("nav .menu").on("click", function(e) {
+      	if ( $("nav").hasClass("active") ) {
+      		console.log("wow");
+      		$("nav").removeClass("active");
+      		$("nav ul").slideUp(200);
+      		
+      	}
+      	else {
+      		console.log("wow2");
+      		$("nav").addClass("active");
+      		$("nav ul").slideDown(200);
+      		
+      	}
+      	// 'active'-ate the menu that was clicked.
+      	toggleActive(e);
+      });
     
   })
 );
