@@ -38,6 +38,7 @@ h5 {font-weight: 400; }
 /* * * * HEADER  * * * */
 
 .header-container {
+    z-index:99999;
     background-color: #fff;
     text-transform: lowercase;
     position:fixed;
@@ -144,42 +145,6 @@ nav ul li a:hover {
         font-weight:200;
     }
 
-    img.me {
-        background-color: rgba(0,0,0, 0.2);
-        padding:20px 20px;
-        border-radius:50%;
-        min-width:50px;
-        max-width:300px;
-
-    }
-
-/* * * * ABOUT  * * * */
-
-    .about {
-        background-color: #643d1b;
-        color:#fff;
-        font-size:1.2em;
-    }
-
-    .about ul {
-        padding: 0 0;
-    }
-    .about ul li {
-        padding: 5px 0 5px 0;
-        list-style-image:none;
-        list-style-type:none;
-        font-weight:400;
-        border-bottom: 1px dashed rgba(0,0,0,0.35);
-    }
-
-    .about h1 {
-        font-weight:100;
-        text-align:center;
-        font-size:2.5em;
-        margin-bottom:10px;
-    }
-
-
 /* * * * Portfolio  * * * */
         
     .work {
@@ -211,8 +176,6 @@ nav ul li a:hover {
         width: 100%;
         display:inline-block;
         vertical-align: top;
-        list-style-image: none;
-        list-style-type: none;
         background-color:#fff;
         border:1px solid #555;
         color: #666;
@@ -262,7 +225,7 @@ nav ul li a:hover {
         font-size:0.35;
         font-weight:100;
         float:right;
-        color:#aaa;
+        color:#ccc;
     }
 
     .work ul li > div.title:after {
@@ -289,18 +252,232 @@ nav ul li a:hover {
 
 /* * * * Skills  * * * */
 
-.skills {
-    background-color: #444;
-    color: #0ca;
-}
+    .skills {
+        background-color: #255;
+        color: #ddd;
+        padding-bottom:100px;
+    }
 
-/* ===============
-    ALL: IE Fixes
-   =============== */
 
-.ie7 .title {
-    padding-top: 20px;
-}
+    .skills .notify > span {
+        border-radius:5px;
+        font-weight:600;
+        background-color:#044;
+        color:#799;
+        padding:4px 8px;
+        margin-right:10px;
+    }
+    .skills .notify {
+
+        padding:4px 0 4px 0;
+        color:#799;
+        font-size:0.85em;
+        font-weight:400;
+
+    }
+
+    }
+    .skills ul {
+        padding-bottom: 35px;
+    }
+
+
+    .skills ul li {
+        font-weight: 300;
+    }
+    .skills ul li .tag {
+        font-weight: 400;
+        height:20px;
+        padding: 10px 10px;
+        color: #886;
+        z-index:99;
+        display: block;
+        position:relative;
+        top:25px;
+        width:45%;
+    }
+
+    .measurement {
+        padding: 5px 5px;
+        z-index:50;
+        display:block;
+        border-bottom:5px solid #222;
+        color: #886;
+    }
+
+    ul li:hover .tag {
+        color:#aa7;
+    }
+    ul li:hover .measurement {
+        border-bottom-color:#000;
+    }
+
+    /* measurement amounts */
+    .w10  {width:10% !important;font-weight:900;}
+    .w20  {width:20% !important;font-weight:900;}
+    .w30  {width:30% !important;font-weight:900;}
+    .w40  {width:40% !important;font-weight:900;}
+    .w50  {width:50% !important;font-weight:900;}
+    .w60  {width:60% !important;font-weight:900;}
+    .w70  {width:70% !important;font-weight:900;}
+    .w80  {width:80% !important;font-weight:900;}
+    .w90  {width:90% !important;font-weight:900;}
+    .w100 {width:97% !important;font-weight:900;}
+
+    /* display */
+     .w10:before { content:"10%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w20:before { content:"20%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w30:before { content:"30%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w40:before { content:"40%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w50:before { content:"50%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w60:before { content:"60%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w70:before { content:"70%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w80:before { content:"80%";position:relative; left:50%; top:15px; font-size:0.75em;}
+     .w90:before { content:"90%";position:relative; left:50%; top:15px; font-size:0.75em;}
+    .w100:before { content:"100%";position:relative;left:50%; top:15px; font-size:0.75em;}
+
+    ul li:hover .w10,
+    ul li:hover .w20,
+    ul li:hover .w30,
+    ul li:hover .w40,
+    ul li:hover .w50,
+    ul li:hover .w60,
+    ul li:hover .w70,
+    ul li:hover .w80,
+    ul li:hover .w90,
+    ul li:hover .w100 {color:#aa7;}
+
+/* * * * ABOUT  * * * */
+
+    .about {
+        /*background-color: #643d1b;*/
+        background-color: #ccc;
+        color:#ffd;
+        background: url("../img/about-header.png") 20% 10% no-repeat #333;
+        /*background-size: 1600px 800px;*/
+
+    }
+
+    .about p {
+        line-height: 1.5em;
+        padding:10px 0 10px 10px;
+        margin-top:50px;
+        font-weight:400;
+    }
+
+    .about h1 {
+
+        font-weight:100;
+        margin-bottom:10px;
+    }
+
+    img.me {
+        margin-top:25px;
+        width:25%;
+        padding:20px 20px;
+        border-radius:20%;
+        min-width:50px;
+        max-width:300px;
+
+    }
+
+/* * * * CONTACT  * * * */
+
+    .contact h1:nth-of-type(1) {
+        text-align:center;
+        border-bottom:1px solid #333;
+        margin-bottom:0px;
+    }
+    .contact h1:nth-of-type(2) {
+        margin:0px 0px 75px 0px;
+        text-align:center;
+        font-size:2em;
+        border-bottom:1px solid #333;
+
+    }
+    .contact h1:nth-of-type(2) a {
+        font-size:0.5em;
+    }
+    
+    .contact ul {
+        text-align: center;
+    }
+    .contact ul li.block {
+        display: block;
+        width:100%;
+        text-align:inherit;
+
+    }
+    .contact ul li:not(.block) {
+        padding:10px 0 10px 0;
+        margin: 0px 0px;
+        text-align:inherit;
+        font-family: "Lato", Helvetica, "Helvetica Neue", Arial;
+        font-weight:300;
+        text-decoration: none;
+        color: #aaa;
+        display:block;
+        margin:10px 0 10px 0;
+        
+    }
+    .contact ul li a,
+    .contact ul li a:visited {
+        font-weight:300;
+        color: #0a8;
+        text-align:center;
+        width:100%;
+        text-decoration: none;
+        padding:25px 25px;
+    }
+    .contact ul li a:hover {
+        color: #085;
+    }
+
+    .contact ul li input {
+
+        font-family: "Lato", Helvetica, "Helvetica Neue", Arial;
+        font-weight:300;
+        text-align:center;
+        border:1px solid #fff;
+        border-bottom:1px solid #ddd;
+        font-weight:300;
+        padding-top: 15px 0px 15px 0px;
+    }
+    .contact ul li input:hover {
+        border-bottom: 1px solid #000;
+    }
+
+/* * * * FOOTER  * * * */
+
+    .footer-container {
+        border-top:1px solid #000;
+        padding-bottom:5px;
+        background-color:#f5f5f5;
+
+    }
+
+    footer {
+
+        text-align:center;
+    }
+
+    footer h3 {
+        font-size:0.75em;
+        padding:5px 5px;
+        font-weight: 300;
+    }
+
+    footer a {
+        font-weight: 300;
+        color:#000;
+    }
+
+
+/* * * ALL: IE Fixes * * */
+
+    .ie7 .title {
+        padding-top: 20px;
+    }
 
 
 /* ==========================================================================
@@ -326,7 +503,10 @@ nav ul li a:hover {
         width:52%;
         margin-left:auto;
         margin-right:auto;
-}
+    }
+    .contact ul li:not(.block) {
+        display:inline-block;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -336,11 +516,17 @@ nav ul li a:hover {
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
     }
+
     .welcome {
         font-size: 3.5em;
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
     }
+
+    .contact ul li:not(.block) {
+        display:inline-block;
+    }
+
 
 }
 
@@ -351,55 +537,63 @@ nav ul li a:hover {
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
     }
+
+    .contact ul li:not(.block) {
+        display:inline-block;
+    }
 }
 
 
 
-/* ==========================================================================
-
-   Helper classes
-
-   ========================================================================== */
+/* * *  Helper classes * * */
 
 
-.pull-left {
-    float:left;
+    .pull-left {
+        float:left;
 
-}
-.pull-right {
-    float:right;
-}
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
+    }
+    .pull-right {
+        float:right;
+    }
 
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
+    .unstyled-list {
+        padding: 0 0;
+    }
+    .unstyled-list > li {
+        list-style-image: none;
+        list-style-type: none;
+    }
+    .ir {
+        background-color: transparent;
+        border: 0;
+        overflow: hidden;
+        *text-indent: -9999px;
+    }
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+    .ir:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
 
-.clearfix:after {
-    clear: both;
-}
+    .hidden {
+        display: none !important;
+        visibility: hidden;
+    }
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
 
-.clearfix {
-    *zoom: 1;
-}
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
 
 /* ==========================================================================
    Print styles

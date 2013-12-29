@@ -1,13 +1,4 @@
 
-var PortfolioManager = (function() {
-	this.load = function() {
-
-	};
-	console.log("wow");
-
-	return this;
-})
-
 
 $(document).ready(
   (function() {
@@ -26,9 +17,6 @@ $(document).ready(
         "padding-top": (h * 0.10) + "px",
 
       });
-
-      a = new PortfolioManager();
-      console.log(a)
     
   })
 );
