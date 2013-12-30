@@ -234,6 +234,7 @@ h5 {font-weight: 400; }
     }
 
     .work ul li > .title {
+        cursor: pointer;
         font-size: 1.3em;
         font-weight:300;
         color: #555;
