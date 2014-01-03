@@ -208,6 +208,20 @@ h5 {font-weight: 400; }
         border:1px solid #000;
     }
 
+    .work p {
+        font-family: "Courier New", serif;
+        font-size:1em;
+        background-color:#fff;
+        border:1px solid #fff;
+        padding:3px 10px;
+    }
+    
+    .work p.pull-right > a,
+    .work p.pull-right > a:visited {
+        color:#000;
+        text-decoration: none;
+    }
+
     /* * ITEMS * */
 
     .work ul {
