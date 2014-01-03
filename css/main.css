@@ -597,8 +597,8 @@ h5 {font-weight: 400; }
     /* mini reset */
     nav ul,
     nav ul li,
-    nav ul li:nth-of-type(2n) { font-size:1em; display:inline-block; background-color: transparent; border: none; padding: 0 0;}
-    nav ul li img {display:inline-block;}
+    nav ul li:nth-of-type(2n) { font-size:1em; display:inline-block; background-color: transparent; border: none; padding: 0 0 0 15px;}
+    nav ul li img {display:none;}
 
 }
 
