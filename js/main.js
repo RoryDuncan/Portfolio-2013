@@ -70,13 +70,30 @@ $(document).ready(
         else {
           $("nav").addClass("active");
           $("nav ul").slideDown(200);
-          
         }
         // 'active'-ate the menu that was clicked.
         toggleActive(e);
       });
 
-      
+      // close the nav menu after selecting
+      $("nav ul li").on("click", function() {
+        if ( $("nav").hasClass("active") ) {
+          $("nav").removeClass("active");
+          $("nav ul").slideUp(100);
+        }
+        else return;
+      });
+      $("nav ul li a").on("click", function(e){
+          e.preventDefault();
+          console.log("Nav a clicked");
+          var t = e.target.hash;
+          console.log(t);
+          console.log(e);
+          $.scrollTo(t, 1000);
+      });
+
+
+
       /* * expand or collapse all work items * */
 
       $(".toggle-all").on("click", function(e) {
