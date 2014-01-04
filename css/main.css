@@ -45,7 +45,7 @@ h5 {font-weight: 400; }
         text-transform: lowercase;
         position:fixed;
         top: 0px;
-        border-bottom:1px solid #033;
+        border-bottom:1px solid #aaa;
         width:100%;
         padding-top: 9px;
         padding-bottom: 10px;
@@ -85,11 +85,13 @@ h5 {font-weight: 400; }
         position:fixed;
         top:3px;
         right:3px;
-        border:1px solid #666;
+        border:1px solid #aaa;
         background-color: #fff;
         margin-right:10px;
         border-radius:3px;
         width:35px;
+        vertical-align: top;
+        text-align:center;
         height: 30px;
         padding:3px 3px;
     }
@@ -111,7 +113,7 @@ h5 {font-weight: 400; }
     nav .menu > .bar{
         width:65%;
         height:0px;
-        border:2px solid #000;
+        border:2px solid #888;
         border-radius: 1px;
         display:block;
         margin: 14% auto;
@@ -282,6 +284,7 @@ h5 {font-weight: 400; }
     /* * ITEMS * */
 
     .work ul {
+
         padding: 0 0;
     }
     
@@ -570,7 +573,6 @@ h5 {font-weight: 400; }
         padding-bottom:5px;
         background-color:#044;
         color:#eff;
-
     }
 
     footer {
@@ -630,7 +632,7 @@ h5 {font-weight: 400; }
 @media only screen and (min-width: 768px) {
 
     html {
-        font-size:1.2em;
+        font-size:1em;
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
     }
