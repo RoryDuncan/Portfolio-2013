@@ -1,24 +1,24 @@
 
 
 $(document).ready(
-	(function() {
+  (function() {
 
 
       var h = $(window).height(),
           w = $(window).width(),
           toggleActive = function(e) {
-          	$(e.currentTarget).toggleClass("active");
+            $(e.currentTarget).toggleClass("active");
           },
           expandAll = function() {
-          	$(".work ul.expandable li").removeClass("active");
-      		$(".work ul.expandable li").addClass("active");
-      		$(".work p a").addClass("active");
-      		$(".work p a").text("Collapse All  [-]");
+            $(".work ul.expandable li").removeClass("active");
+          $(".work ul.expandable li").addClass("active");
+          $(".work p a").addClass("active");
+          $(".work p a").text("Collapse All  [-]");
           },
           collapseAll = function() {
-          	$(".work ul.expandable li").removeClass("active");
-          	$(".work p a").removeClass("active");
-      		$(".work p a").text("Expand All  [+]");
+            $(".work ul.expandable li").removeClass("active");
+            $(".work p a").removeClass("active");
+          $(".work p a").text("Expand All  [+]");
           };
 
           if (w >= 485) {
@@ -35,10 +35,12 @@ $(document).ready(
             }, 1000)
 
             window.setTimeout( function() {
-              $("div.next-slide").fadeIn(600);
+              getCurrentSlide();
+              toggleNextSlide();
+              $("div.next-slide").slideDown(600);
             }, 2000)
           }
-      	
+        
 
       slide = $('.slide');
       nav = $('div.header-container');
@@ -58,90 +60,93 @@ $(document).ready(
       // required for touch interfaces
       $(".work ul.expandable li").on("click", toggleActive);
       $("nav .menu").on("click", function(e) {
-      	if ( $("nav").hasClass("active") ) {
-      		console.log("wow");
-      		$("nav").removeClass("active");
-      		$("nav ul").slideUp(200);
-      		
-      	}
-      	else {
-      		console.log("wow2");
-      		$("nav").addClass("active");
-      		$("nav ul").slideDown(200);
-      		
-      	}
-      	// 'active'-ate the menu that was clicked.
-      	toggleActive(e);
+        if ( $("nav").hasClass("active") ) {
+          console.log("wow");
+          $("nav").removeClass("active");
+          $("nav ul").slideUp(200);
+          
+        }
+        else {
+          console.log("wow2");
+          $("nav").addClass("active");
+          $("nav ul").slideDown(200);
+          
+        }
+        // 'active'-ate the menu that was clicked.
+        toggleActive(e);
       });
 
       
       /* * expand or collapse all work items * */
 
       $(".toggle-all").on("click", function(e) {
-      	e.preventDefault();
-      	if ( $(e.currentTarget).hasClass("active")) {
-      		collapseAll();
-      	}
-    	else expandAll();
+        e.preventDefault();
+        if ( $(e.currentTarget).hasClass("active")) {
+          collapseAll();
+        }
+      else expandAll();
       });
 
 /* * SCROLLSPY-like * */
-	//helpers
-	var flatten = function(number) {return (~~number)};
-	var isWithin$ = function(value, $sel) {
+  //helpers
+  var flatten = function(number) {return (~~number)};
+  var isWithin$ = function(value, $sel) {
 
-		if (value >= $sel.scrollTop() && value <= ($sel.offset().top + $sel.height() ) ) {
-			return true;
-		}
-		else return false;
-	};
+    if (value >= $sel.scrollTop() && value <= ($sel.offset().top + $sel.height() ) ) {
+      return true;
+    }
+    else return false;
+  };
 
-	var getScrollTop = function() {
-		return $(document).scrollTop();
-	};
+  var getScrollTop = function() {
+    return $(document).scrollTop();
+  };
 
-	/* * CORE FUNCTIONING * */
+  /* * CORE FUNCTIONING * */
 
-	// specific positions:
-	var epoch = $("#epoch"),
-		work = $("#work"), 
-		skills = $("#skills"), 
-		about = $("#about"), 
-		contact = $("#contact"),
+  // specific positions:
+  var epoch = $("#epoch"),
+      work = $("#work"), 
+      skills = $("#skills"), 
+      about = $("#about"), 
+      contact = $("#contact"),
 
-		currentSlide = null,
-		nextSlide = $("#work"),
-		currentSlideIndex = 0,
-		listed = [epoch, work, skills, about, contact];
+      currentSlide = null,
+      nextSlide = $("#work"),
+      currentSlideIndex = 0,
+      listed = [epoch, work, skills, about, contact];
 
-	var getCurrentSlide = function() {
+  var getCurrentSlide = function() {
 
-		var scroll = getScrollTop();
+    var scroll = getScrollTop();
 
-		// test each jQuery object to determine which slide to assign to currentSlide variable
-		for (var i = 0, ii = listed.length; i < ii; i+=1) {
-			if ( isWithin$(scroll, listed[i]) === true ) {
-				currentSlide = listed[i];
-				currentSlideIndex = i;
-				console.log("current slide is ", currentSlide.selector)
-				break;
-			}
-			else continue;
-		}
-	}
-	var toggleNextSlide = function() {
-		if (currentSlideIndex === ( listed.length - 2 ) ){
-			$("div.next-slide").slideUp();
-		}
-		else $("div.next-slide").slideDown();
-	};
+    // test each jQuery object to determine which slide to assign to currentSlide variable
+    for (var i = 0, ii = listed.length; i < ii; i+=1) {
+      if ( isWithin$(scroll, listed[i]) === true ) {
+        currentSlide = listed[i];
+        currentSlideIndex = i;
+        console.log("current slide is ", currentSlide.selector)
+        break;
+      }
+      else continue;
+    }
+  }
+  var toggleNextSlide = function() {
+    var adjusted = listed.length - 2;
+    console.log(currentSlideIndex, " >= ",  adjusted );
+    if ( currentSlideIndex >= adjusted ){
+      $("div.next-slide").slideUp();
+      console.log("true");
+    }
+    else $("div.next-slide").slideDown();
+  };
 
 
 
 
     $('body').on("mousewheel", function() {
-    	getCurrentSlide();
-		toggleNextSlide();
+      getCurrentSlide();
+    toggleNextSlide();
     });
 
 
@@ -149,12 +154,12 @@ $(document).ready(
 /* * Scroll-button * */
       $(".next-slide").on("click", function() {
 
-      	//update what is considered the current slide
-      	getCurrentSlide();
-      	// handler for if it's the last slide
-      	toggleNextSlide();
-      	// scroll time
-      	$.scrollTo( listed[currentSlideIndex+1], 1000);
-      	
+        //update what is considered the current slide
+        getCurrentSlide();
+        // handler for if it's the last slide
+        toggleNextSlide();
+        // scroll time
+        $.scrollTo( listed[currentSlideIndex+1], 1000);
+        
       });
 }));
