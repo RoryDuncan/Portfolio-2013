@@ -21,13 +21,15 @@ $(document).ready(
           $(".work p a").text("Expand All  [+]");
           };
 
+          // only animate if the width of the screen is above 485px
+          // contrived for presentation, but doens't need to hurt mobile users
           if (w >= 485) {
             $("div.next-slide").hide();
             $(".hero").children().hide();
 
 
             window.setTimeout( function() {
-            $(".hero h1").fadeIn(600);
+            $(".hero h1").fadeIn(800);
             }, 300)
 
             window.setTimeout( function() {
@@ -61,13 +63,11 @@ $(document).ready(
       $(".work ul.expandable li").on("click", toggleActive);
       $("nav .menu").on("click", function(e) {
         if ( $("nav").hasClass("active") ) {
-          console.log("wow");
           $("nav").removeClass("active");
           $("nav ul").slideUp(200);
           
         }
         else {
-          console.log("wow2");
           $("nav").addClass("active");
           $("nav ul").slideDown(200);
           
@@ -125,7 +125,6 @@ $(document).ready(
       if ( isWithin$(scroll, listed[i]) === true ) {
         currentSlide = listed[i];
         currentSlideIndex = i;
-        console.log("current slide is ", currentSlide.selector)
         break;
       }
       else continue;
@@ -133,10 +132,10 @@ $(document).ready(
   }
   var toggleNextSlide = function() {
     var adjusted = listed.length - 2;
-    console.log(currentSlideIndex, " >= ",  adjusted );
+
     if ( currentSlideIndex >= adjusted ){
       $("div.next-slide").slideUp();
-      console.log("true");
+
     }
     else $("div.next-slide").slideDown();
   };

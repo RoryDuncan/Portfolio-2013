@@ -11,12 +11,14 @@ body {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #088;
+    color:#fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #088;
+    color:#fff;
     text-shadow: none;
 }
 
@@ -163,6 +165,7 @@ h5 {font-weight: 400; }
         padding-left:25px;
         padding-right:25px;
         padding-bottom:5px;
+        height:5%;
         position:fixed;
         bottom:0%;
         font-size:3em;
@@ -171,15 +174,16 @@ h5 {font-weight: 400; }
         -webkit-transition: background-color 0.3s linear;
     }
 
-
+/* * * * Slide Menuevering(sp)  * * * */
     div.next-slide:hover {
         background-color:rgba(0,0,0,0.1);
         -webkit-transition: background-color 0.3s linear;
+        -moz-transition: background-color 0.3s linear;
     }
     div.next-slide span.tri,
     div.next-slide:hover span.tri {
         position:relative;
-        top:50px;
+        top:25px;
         width: 0px;
         height: 0px;
         border-style: solid;
@@ -187,6 +191,7 @@ h5 {font-weight: 400; }
         border-color: #000000 transparent transparent transparent;
         animation: waver 3s infinite;
         -webkit-animation: waver 3s infinite; /* Safari and Chrome */
+        -moz-transition: waver 3s infinite;
     }
 
     @keyframes waver
@@ -226,6 +231,9 @@ h5 {font-weight: 400; }
         padding-top:25px;
         background-color:#fff;
     }
+    .welcome .hero {
+        cursor:default;
+    }
 
     .welcome .hero h1 {
         margin:0 0;
@@ -254,6 +262,7 @@ h5 {font-weight: 400; }
         padding:5px 10px 10px 10px;
         background-color: #fff; 
         border:1px solid #000;
+        width:100%;
     }
 
     .work p {
@@ -460,7 +469,7 @@ h5 {font-weight: 400; }
         /*background-color: #643d1b;*/
         background-color: #ccc;
         color:#ffd;
-        background: url("../img/about-header.png") 20% 10% no-repeat #333;
+        background: url("../img/about-header.png") 20% 10% no-repeat fixed #333;
         /*background-size: 1600px 800px;*/
 
     }
@@ -559,7 +568,8 @@ h5 {font-weight: 400; }
     .footer-container {
         border-top:1px solid #000;
         padding-bottom:5px;
-        background-color:#f5f5f5;
+        background-color:#044;
+        color:#eff;
 
     }
 
