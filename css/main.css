@@ -179,11 +179,11 @@ h5 {font-weight: 400; }
     }
 
 /* * * * Slide Menuevering(sp)  * * * */
-    div.next-slide:hover {
-        background-color:rgba(0,0,0,0.1);
-        -webkit-transition: background-color 0.3s linear;
-        -moz-transition: background-color 0.3s linear;
+    
+    div.next-slide {
+        display: none; /* not visible for mobile, ends up being in the way and not very smooth transitions */
     }
+
     div.next-slide span.tri,
     div.next-slide:hover span.tri {
         position:relative;
@@ -196,6 +196,13 @@ h5 {font-weight: 400; }
         animation: waver 3s infinite;
         -webkit-animation: waver 3s infinite; /* Safari and Chrome */
         -moz-transition: waver 3s infinite;
+    }
+
+    div.next-slide:hover {
+        
+        background-color:rgba(0,0,0,0.1);
+        -webkit-transition: background-color 0.3s linear;
+        -moz-transition: background-color 0.3s linear;
     }
 
     @keyframes waver
@@ -637,6 +644,10 @@ h5 {font-weight: 400; }
         font-size:1em;
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
+    }
+
+    div.next-slide {
+        display: block; /* not visible for mobile, ends up being in the way and not very smooth transitions */
     }
 
     .welcome {

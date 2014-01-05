@@ -21,12 +21,12 @@ $(document).ready(
           $(".work p a").text("Expand All  [+]");
           };
 
+
           // only animate if the width of the screen is above 485px
           // contrived for presentation, but doens't need to hurt mobile users
           if (w >= 485) {
             $("div.next-slide").hide();
             $(".hero").children().hide();
-
 
             window.setTimeout( function() {
             $(".hero h1").fadeIn(800);
@@ -56,11 +56,14 @@ $(document).ready(
         "padding-top": (h * 0.10) + "px",
       });
 
+/* * * EVENTS * * */
 
       /* * Expansion of work list items when clicked * */
 
       // required for touch interfaces
       $(".work ul.expandable li").on("click", toggleActive);
+
+
       $("nav .menu").on("click", function(e) {
         if ( $("nav").hasClass("active") ) {
           $("nav").removeClass("active");
@@ -83,12 +86,11 @@ $(document).ready(
         }
         else return;
       });
+
+      // 
       $("nav ul li a").on("click", function(e){
           e.preventDefault();
-          console.log("Nav a clicked");
           var t = e.target.hash;
-          console.log(t);
-          console.log(e);
           $.scrollTo(t, 1000);
       });
 
@@ -105,6 +107,7 @@ $(document).ready(
       });
 
 /* * SCROLLSPY-like * */
+
   //helpers
   var flatten = function(number) {return (~~number)};
   var isWithin$ = function(value, $sel) {
