@@ -40,8 +40,9 @@ h5 {font-weight: 400; }
 /* * * * HEADER  * * * */
 
     .header-container {
+
         z-index:99999;
-        background-color: #fff;
+        background-color: #222;
         text-transform: lowercase;
         position:fixed;
         top: 0px;
@@ -71,12 +72,15 @@ h5 {font-weight: 400; }
     h1.title a,
     h1.title a:visited  {
 
-        color:#000;
+        line-height: 0.75em;
+        position: relative;
+        
+        color:#eee;
         text-decoration: none;
     }
 
     h1.title a:hover {
-        color:#0a8;
+        color:#fff;
     }
 
     nav {
@@ -87,20 +91,19 @@ h5 {font-weight: 400; }
         position:fixed;
         top:3px;
         right:3px;
-        border:1px solid #aaa;
-        background-color: #fff;
+        border:1px solid #222;
+        background-color: #222;
         margin-right:10px;
         border-radius:3px;
         width:35px;
         vertical-align: top;
         text-align:center;
         height: 32px;
-        padding:3px 3px;
+        padding:8px 3px 3px 3px;
     }
 
     nav > .active {
-        background-color:#eee !important;
-        border:1px solid #fff;
+        background-color:#222 !important;
     }
 
 
@@ -109,20 +112,20 @@ h5 {font-weight: 400; }
     }
 
     nav .menu:active {
-        background-color: #f5f5f5;
+        background-color: #222;
     }
 
     nav .menu > .bar{
         width:65%;
         height:0px;
-        border:2px solid #888;
+        border:2px solid #eee;
         border-radius: 1px;
         display:block;
         margin: 14% auto;
     }
     
     nav ul {
-        background-color:#eee;
+        background-color:#222;
         display: none;
         width:100%;
         padding: 0 0;
@@ -137,8 +140,8 @@ h5 {font-weight: 400; }
         font-size:1.4em;
         padding: 15px 15px;
         margin: 1px 0 1px 0;
-        background-color: #fff;
-        border-bottom:1px solid #ddd;
+        background-color: #222;
+        border-bottom:1px solid #111;
 
     }
 
@@ -151,12 +154,12 @@ h5 {font-weight: 400; }
     }
 
     nav ul li a {
-        color: #333;
+        color: #ddd;
         text-decoration: none;
     }
 
     nav ul li a:hover {
-        color:#aaa;
+        color:#fff;
         font-weight:200;
         -webkit-transition: color 0.2s linear;
     }
@@ -219,7 +222,7 @@ h5 {font-weight: 400; }
         100% {border-color: #000 transparent transparent transparent;}
     }
 
-/* * * * GENERAL  * * * */
+/* * * * GENERAL / ALL  * * * */
 
     .container {}
 
@@ -238,7 +241,7 @@ h5 {font-weight: 400; }
 /* * * * WELCOME  * * * */
 
     .welcome {
-        font-size:2em;
+        font-size:2.4em;
         padding-top:25px;
         background-color:#fff;
     }
@@ -253,10 +256,10 @@ h5 {font-weight: 400; }
         font-weight:400;
     }
     .welcome .hero p {
-
         margin:0 0;
+        font-size:1.25em;
         line-height: 0.9em;
-        font-weight:200;
+        font-weight:300;
     }
 
 /* * * * WORK  * * * */
@@ -596,6 +599,7 @@ h5 {font-weight: 400; }
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
     }
+
     .container > div {
         width:52%;
         margin-left:auto;

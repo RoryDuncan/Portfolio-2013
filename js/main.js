@@ -199,7 +199,7 @@ $(document).ready(
   var lastScrollTop = null;
   var determineScrollDirection = function(e) {
     var scroll = getScrollTop();
-    var isMobile = window.innerWidth <= 600 ? true : false;
+    var isMobile = window.innerWidth <= 770 ? true : false;
 
     if (!isMobile) return;
     if (lastScrollTop === null) {
