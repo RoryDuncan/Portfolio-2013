@@ -46,7 +46,7 @@ h5 {font-weight: 400; }
         text-transform: lowercase;
         position:fixed;
         top: 0px;
-        border-bottom:1px solid #aaa;
+        border-bottom:1px solid #222;
         width:100%;
         padding-top: 9px;
         padding-bottom: 10px;
@@ -74,7 +74,7 @@ h5 {font-weight: 400; }
 
         line-height: 0.75em;
         position: relative;
-        
+        font-weight: 300;
         color:#eee;
         text-decoration: none;
     }
@@ -100,10 +100,6 @@ h5 {font-weight: 400; }
         text-align:center;
         height: 32px;
         padding:8px 3px 3px 3px;
-    }
-
-    nav > .active {
-        background-color:#222 !important;
     }
 
 
@@ -160,35 +156,42 @@ h5 {font-weight: 400; }
 
     nav ul li a:hover {
         color:#fff;
-        font-weight:200;
-        -webkit-transition: color 0.2s linear;
-    }
 
-    div.next-slide {
-        text-align:center;
-        width:100%;
-        background-color:rgba(255,255,255,0.15);
-        cursor:pointer;
-        padding-left:25px;
-        padding-right:25px;
-        padding-bottom:5px;
-        height:5%;
-        position:fixed;
-        bottom:0%;
-        font-size:3em;
-        font-family:"Helvetica", "Arial", serif;
-        color:#000;
-        -webkit-transition: background-color 0.3s linear;
+        -webkit-transition: color 0.2s linear;
     }
 
 /* * * * Slide Menuevering(sp)  * * * */
     
+    div.next-slide {
+        opacity: 0.9;
+        border: 2px solid #333;
+
+        background: url("../img/arrow.png") 3px 5px no-repeat;
+        background-size: 60px 60px;
+        text-align:center;
+        width:65px;
+        height: 65px;
+        background-color: transparent;
+        cursor:pointer;
+        position:fixed;
+        bottom:2%;
+        right:2%;
+        font-size:3em;
+        font-family:"Helvetica", "Arial", serif;
+        color:#000;
+        animation: waver 2.5s infinite;
+        -webkit-animation: waver 2.5s infinite; /* Safari and Chrome */
+        -moz-animation: waver 2.5s infinite;
+        -webkit-transition: border 0.3s linear;
+    }
+
     div.next-slide {
         display: none; /* not visible for mobile, ends up being in the way and not very smooth transitions */
     }
 
     div.next-slide span.tri,
     div.next-slide:hover span.tri {
+        display: none;
         position:relative;
         top:25px;
         width: 0px;
@@ -198,28 +201,29 @@ h5 {font-weight: 400; }
         border-color: #000000 transparent transparent transparent;
         animation: waver 3s infinite;
         -webkit-animation: waver 3s infinite; /* Safari and Chrome */
-        -moz-transition: waver 3s infinite;
+        -moz-animation: waver 3s infinite;
     }
 
     div.next-slide:hover {
-        
-        background-color:rgba(0,0,0,0.1);
-        -webkit-transition: background-color 0.3s linear;
-        -moz-transition: background-color 0.3s linear;
+
     }
 
     @keyframes waver
     {
-        0% {border-color: #000 transparent transparent transparent;}
-        50% {border-color: rgba(0,0,0,0.2) transparent transparent transparent;}
-        100% {border-color: #000 transparent transparent transparent;}
+        0% {opacity:0.9; bottom:2%;}
+        25% {opacity:0.3;}
+        50% {opacity:1; bottom:4%;}
+        75% { opacity: 0.3;}
+        100% {opacity:0.9; bottom:2%;}
     }
 
     @-webkit-keyframes waver /* Safari and Chrome */
     {
-        0% {border-color: #000 transparent transparent transparent;}
-        50% {border-color: rgba(0,0,0,0.2) transparent transparent transparent;}
-        100% {border-color: #000 transparent transparent transparent;}
+        0% {opacity:0.9; bottom:2%;}
+        25% {opacity:0.3;}
+        50% {opacity:1; bottom:4%;}
+        75% { opacity: 0.3;}
+        100% {opacity:0.9; bottom:2%;}
     }
 
 /* * * * GENERAL / ALL  * * * */
@@ -456,9 +460,8 @@ h5 {font-weight: 400; }
 
     .about {
         /*background-color: #643d1b;*/
-        background-color: #ccc;
-        color:#cff;
-        background: url("../img/about-header.png") 20% 10% no-repeat fixed #333;
+        color:#bb7;
+        background: url("../img/about-header.png") 20% 10% no-repeat fixed #3f5755;
         /*background-size: 1600px 800px;*/
 
     }
@@ -478,9 +481,9 @@ h5 {font-weight: 400; }
 
     img.me {
         margin-top:25px;
-        width:25%;
+        width:30%;
         padding:20px 20px;
-        border-radius:20%;
+        border-radius:2px;
         min-width:50px;
         max-width:300px;
 
@@ -622,10 +625,17 @@ h5 {font-weight: 400; }
 
 @media only screen and (min-width: 768px) {
 
+
     html {
         font-size:1em;
         -moz-transition: font-size 0.25s linear;
         -webkit-transition: font-size 0.25s linear;
+    }
+
+    .container > div {
+        width:55%;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     div.next-slide {
@@ -645,6 +655,9 @@ h5 {font-weight: 400; }
     /* * MENU MAGIC * */
 
     h1.title {width:33.3%; text-align:right;}
+
+    h1.title a {font-weight: 200;}
+
     h1.title,
     nav { display:inline-block; float:left;}
     nav .menu { display:none;}

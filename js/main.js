@@ -184,7 +184,7 @@ $(document).ready(
     }
   }
   var toggleNextSlide = function() {
-    var adjusted = listed.length - 2;
+    var adjusted = listed.length - 1;
 
     if ( currentSlideIndex >= adjusted ){
       $("div.next-slide").slideUp();
