@@ -385,95 +385,66 @@ h5 {font-weight: 400; }
         color: #ddd;
         padding-bottom:100px;
     }
-
-
-    .skills .notify > span {
-        border-radius:5px;
-        font-weight:600;
-        background-color:#044;
-        color:#799;
-        padding:4px 8px;
-        margin-right:10px;
-    }
-    .skills .notify {
-
-        padding:4px 0 4px 0;
-        color:#799;
-        font-size:0.85em;
-        font-weight:400;
-
+    .skills h1 {
+        color: #cc7;
     }
 
+    .skills a,
+    .skill a:visited {
+        color:#aa7;
     }
+
     .skills ul {
         padding-bottom: 35px;
+        padding-left: 25px;
     }
 
-
-    .skills ul li {
+    .skills #sorttext {
         font-weight: 300;
-    }
-    .skills ul li .tag {
-        font-weight: 400;
-        height:20px;
-        padding: 10px 10px;
-        color: #886;
-        z-index:99;
+        cursor: pointer;
+        color: #cc7;
         display: block;
-        position:relative;
-        top:25px;
-        width:45%;
+        margin: 0 auto;
+        text-align: right;
     }
 
-    .measurement {
-        padding: 5px 5px;
-        z-index:50;
+
+
+    .skills ul li:not(.description) {
+        font-weight: 300;
+        text-align:right;
+        display: inline-block;
+
+    }
+    .skills ul li.description {
         display:block;
-        border-bottom:5px solid #222;
-        color: #886;
+        clear:both;
+        padding: 25px 35px 10px 0 ;
+        font-weight: 400;
+        color: #caa;
+    }
+    .skills .tag {
+
+        display: inline-block;
+        border-radius:1px;
+        background-color: #222;
+        border: 1px solid #222;
+        font-weight: 400;
+        font-size: 1.5em;
+        padding: 20px 32px;
+        margin: 4px 2px;
+        color: #aaa;
+        z-index:99;
+
     }
 
     ul li:hover .tag {
-        color:#aa7;
+        cursor:default;
+        color:#ccc;
+        background-color: #333;
+        border:1px solid #333;
+
     }
-    ul li:hover .measurement {
-        border-bottom-color:#000;
-    }
-
-    /* measurement amounts */
-    .w10  {width:10% !important;font-weight:900;}
-    .w20  {width:20% !important;font-weight:900;}
-    .w30  {width:30% !important;font-weight:900;}
-    .w40  {width:40% !important;font-weight:900;}
-    .w50  {width:50% !important;font-weight:900;}
-    .w60  {width:60% !important;font-weight:900;}
-    .w70  {width:70% !important;font-weight:900;}
-    .w80  {width:80% !important;font-weight:900;}
-    .w90  {width:90% !important;font-weight:900;}
-    .w100 {width:97% !important;font-weight:900;}
-
-    /* display */
-     .w10:before { content:"1/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w20:before { content:"2/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w30:before { content:"3/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w40:before { content:"4/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w50:before { content:"5/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w60:before { content:"6/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w70:before { content:"7/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w80:before { content:"8/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-     .w90:before { content:"9/10";position:relative; left:50%; top:15px; font-size:0.75em;}
-    .w100:before { content:"10/10";position:relative;left:50%; top:15px; font-size:0.75em;}
-
-    ul li:hover .w10,
-    ul li:hover .w20,
-    ul li:hover .w30,
-    ul li:hover .w40,
-    ul li:hover .w50,
-    ul li:hover .w60,
-    ul li:hover .w70,
-    ul li:hover .w80,
-    ul li:hover .w90,
-    ul li:hover .w100 {color:#aa7;}
 
 /* * * * ABOUT  * * * */
 
@@ -636,6 +607,7 @@ h5 {font-weight: 400; }
         -webkit-transition: height 1s linear;
         -moz-transition: height 0.2s linear;
     }
+
 }
 
 @media only screen and (min-width: 768px) {

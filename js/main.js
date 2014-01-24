@@ -106,6 +106,32 @@ $(document).ready(
       else expandAll();
       });
 
+
+      var skillsSortState = 0;
+      $(".skills ul li.description").hide()
+      $(".skills ul li span.notlearnt").hide()
+      $(".skills .skillsort p a").on("click", function(e) {
+        e.preventDefault()
+        states = ["view simple", "view detailed"]
+        $("#sorttext").text( states[skillsSortState] )
+        skillsSortState = skillsSortState === 1 ? 0 : 1
+        $(".skills ul li.description").slideToggle()
+        $(".skills ul li span.notlearnt").toggle()
+        if (!skillsSortState) {
+            $(".skills ul li .tag").animate({
+              "padding":"20px 36px",
+              "font-size":"1.5em",
+              "margin":"4px 2px"
+            }, 100);
+         }
+        else {
+          $(".skills ul li .tag").animate({
+              "padding":"10px 16px",
+              "font-size":"1em",
+              "margin":"2px 0px"
+            }, 100);
+        }
+      });
 /* * SCROLLSPY-like * */
 
   //helpers
