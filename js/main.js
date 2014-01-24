@@ -7,7 +7,7 @@ $(document).ready(
       var h = $(window).height(),
           w = $(window).width(),
           toggleActive = function(e) {
-            $(e.currentTarget).toggleClass("active");
+            $(e.target).toggleClass("active");
           },
           expandAll = function() {
             $(".work ul.expandable li").removeClass("active");
@@ -60,7 +60,7 @@ $(document).ready(
 
       /* * Expansion of work list items when clicked * */
 
-      // required for touch interfaces
+      // needed for touch interfaces, probably
       $(".work ul.expandable li").on("click", toggleActive);
 
 
@@ -119,8 +119,8 @@ $(document).ready(
         $(".skills ul li span.notlearnt").toggle()
         if (!skillsSortState) {
             $(".skills ul li .tag").animate({
-              "padding":"20px 36px",
-              "font-size":"1.5em",
+              "padding":"15px 24px",
+              "font-size":"1.2em",
               "margin":"4px 2px"
             }, 100);
          }
@@ -184,8 +184,6 @@ $(document).ready(
     }
     else $("div.next-slide").slideDown();
   };
-
-
 /* * Hiding and showing of navigation bar based on scrolling up and down * */
   
   var hideNavBar = function() {

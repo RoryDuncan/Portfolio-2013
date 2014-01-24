@@ -430,12 +430,11 @@ h5 {font-weight: 400; }
         background-color: #222;
         border: 1px solid #222;
         font-weight: 400;
-        font-size: 1.5em;
-        padding: 20px 32px;
+        font-size: 1.2em;
+        padding: 15px 24px;
         margin: 4px 2px;
         color: #aaa;
         z-index:99;
-
     }
 
     ul li:hover .tag {
