@@ -2,7 +2,7 @@
 
 $(document).ready(
   (function() {
-
+      console.log("Wow. Hi.")
 
       var h = $(window).height(),
           w = $(window).width(),
@@ -26,21 +26,29 @@ $(document).ready(
           // contrived for presentation, but doens't need to hurt mobile users
           if (w >= 485) {
             $("div.next-slide").hide();
-            $(".hero").children().hide();
+            $(".hero p span").hide();
+            $(".hero h1").hide();
 
             window.setTimeout( function() {
             $(".hero h1").fadeIn(800);
             }, 300)
 
             window.setTimeout( function() {
-              $(".hero p").fadeIn(600);
+
+              $(".hero p").show();
+              
+              for (x = 0, xx = $(".hero p span").length; x < xx; x++) {
+                $obj = $( $(".hero p span")[x] );
+                $obj.delay(x*540).fadeIn(600);
+              }
+
             }, 1000)
 
             window.setTimeout( function() {
               getCurrentSlide();
               toggleNextSlide();
               $("div.next-slide").slideDown(600);
-            }, 2000)
+            }, 3000)
           }
         
 

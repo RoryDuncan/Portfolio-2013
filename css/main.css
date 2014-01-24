@@ -237,6 +237,10 @@ h5 {font-weight: 400; }
         margin-left:auto;
         margin-right:auto;
     }
+    .smalltext {
+        margin: 0 auto;
+        font-size:14px;
+    }
 
 /* * * * WELCOME  * * * */
 
@@ -601,7 +605,7 @@ h5 {font-weight: 400; }
     }
 
     .container > div {
-        width:52%;
+        width:81%;
         margin-left:auto;
         margin-right:auto;
     }
