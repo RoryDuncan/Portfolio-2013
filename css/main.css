@@ -55,7 +55,7 @@ h5 {font-weight: 400; }
 
     header {
 
-        font-size:1.5em;
+        font-size:2em;
         width:100%;
         margin: 0 auto;
     }
@@ -94,7 +94,7 @@ h5 {font-weight: 400; }
         width:35px;
         vertical-align: top;
         text-align:center;
-        height: 30px;
+        height: 32px;
         padding:3px 3px;
     }
 
@@ -451,7 +451,7 @@ h5 {font-weight: 400; }
     .about {
         /*background-color: #643d1b;*/
         background-color: #ccc;
-        color:#ffd;
+        color:#cff;
         background: url("../img/about-header.png") 20% 10% no-repeat fixed #333;
         /*background-size: 1600px 800px;*/
 
@@ -583,7 +583,10 @@ h5 {font-weight: 400; }
 
     header {
         width:100%;
-        font-size: 1.5em;
+        font-size: 1.85em;
+    }
+    nav .menu {
+        font-size: 0.8em;
     }
     html {
         -moz-transition: font-size 0.25s linear;

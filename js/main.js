@@ -11,9 +11,9 @@ $(document).ready(
           },
           expandAll = function() {
             $(".work ul.expandable li").removeClass("active");
-          $(".work ul.expandable li").addClass("active");
-          $(".work p a").addClass("active");
-          $(".work p a").text("Collapse All  [-]");
+            $(".work ul.expandable li").addClass("active");
+            $(".work p a").addClass("active");
+            $(".work p a").text("Collapse All  [-]");
           },
           collapseAll = function() {
             $(".work ul.expandable li").removeClass("active");
@@ -56,7 +56,7 @@ $(document).ready(
         "padding-top": (h * 0.10) + "px",
       });
 
-/* * * EVENTS * * */
+/* * * EVENT DRIVEN ITEMS * * */
 
       /* * Expansion of work list items when clicked * */
 
@@ -137,13 +137,12 @@ $(document).ready(
   //helpers
   var flatten = function(number) {return (~~number)};
   var isWithin$ = function(value, $sel) {
-
+    // checks whether or not the value is within the $sel element's bounding box
     if (value >= $sel.scrollTop() && value <= ($sel.offset().top + $sel.height() ) ) {
       return true;
     }
     else return false;
   };
-
   var getScrollTop = function() {
     return $(document).scrollTop();
   };
@@ -187,15 +186,49 @@ $(document).ready(
   };
 
 
+/* * Hiding and showing of navigation bar based on scrolling up and down * */
+  
+  var hideNavBar = function() {
+    $("nav .menu").hide();
+    $(".header-container").slideUp(100);
+  };
+  var showNavBar = function() {
+    $(".header-container").slideDown(100);
 
+    $("nav .menu").show();  
+  };
 
-    $('body').on("mousewheel", function() {
+  var lastScrollTop = null;
+  var determineScrollDirection = function(e) {
+    var scroll = getScrollTop();
+    var isMobile = window.innerWidth <= 600 ? true : false;
+
+    if (!isMobile) return;
+    if (lastScrollTop === null) {
+      lastScrollTop = scroll;
+      return;
+    }
+
+    if (scroll <= lastScrollTop) {
+      showNavBar();
+    }
+    else {
+      hideNavBar();
+    }
+
+    lastScrollTop = scroll;
+
+  };
+  /* bundle all the scroll events together */
+  var scrollHandler = function(e){
+      determineScrollDirection(e);
       getCurrentSlide();
-    toggleNextSlide();
-    });
+      toggleNextSlide();
+  };
 
 
-      
+  $(document).on("scroll", function(e) {scrollHandler(e);});
+  
 /* * Scroll-button * */
       $(".next-slide").on("click", function() {
 
@@ -207,4 +240,6 @@ $(document).ready(
         $.scrollTo( listed[currentSlideIndex+1], 1000);
         
       });
+
+
 }));
