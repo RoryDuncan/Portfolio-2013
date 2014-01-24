@@ -163,9 +163,9 @@ h5 {font-weight: 400; }
 /* * * * Slide Menuevering(sp)  * * * */
     
     div.next-slide {
-        display: none !important; /* not visible for mobile, ends up being in the way and not very smooth transitions */
+        display: none; /* not visible for mobile, ends up being in the way and not very smooth transitions */
         opacity: 0.9;
-        border: 2px solid #333;
+        border: 4px solid #000;
         background: url("../img/arrow.png") 3px 5px no-repeat transparent;
         background-size: 60px 60px;
         text-align:center;
@@ -196,13 +196,17 @@ h5 {font-weight: 400; }
 
     @-webkit-keyframes waver /* Safari and Chrome */
     {
-        0% {opacity:0.9; bottom:2%;}
-        25% {opacity:0.3;}
+        0% {opacity:0.6; bottom:2%;}
+        25% {opacity:0.6;}
         50% {opacity:1; bottom:4%;}
-        75% { opacity: 0.3;}
-        100% {opacity:0.9; bottom:2%;}
+        75% { opacity: 0.6;}
+        100% {opacity:0.6; bottom:2%;}
     }
 
+    div.next-slide:active {
+        border: 2px solid #000;
+        opacity: 1;
+    }
 /* * * * GENERAL / ALL  * * * */
 
     .container {}
@@ -453,7 +457,6 @@ h5 {font-weight: 400; }
         color: #000;
         background-color: #fff;
         padding:20px 20px 20px 20px;
-        width:100%;
         line-height: 1.5em;
         margin-top:50px;
         font-weight:400;
@@ -621,13 +624,13 @@ h5 {font-weight: 400; }
     }
 
     .container > div {
-        width:55%;
+        width:80%;
         margin-left:auto;
         margin-right:auto;
     }
 
     div.next-slide {
-        display: block !important; /* not visible for mobile, ends up being in the way and not very smooth transitions */
+        display: block; /* not visible for mobile, ends up being in the way and not very smooth transitions */
     }
 
     .welcome {
@@ -643,6 +646,7 @@ h5 {font-weight: 400; }
     img.me {
         display: block;
     }
+
     .about p { width: 50%}
     
     /* * MENU MAGIC * */
@@ -664,6 +668,12 @@ h5 {font-weight: 400; }
 }
 
 @media only screen and (min-width: 1140px) {
+
+    .container > div {
+        width:55%;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
     .welcome {
         font-size: 4em;

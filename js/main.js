@@ -171,6 +171,7 @@ $(document).ready(
       listed = [epoch, work, skills, about, contact];
 
   var getCurrentSlide = function() {
+    console.log(2);
 
     var scroll = getScrollTop();
 
@@ -185,13 +186,22 @@ $(document).ready(
     }
   }
   var toggleNextSlide = function() {
-    var adjusted = listed.length - 1;
 
-    if ( currentSlideIndex >= adjusted ){
-      $("div.next-slide").slideUp();
+    var adjusted = listed.length - 2;
+        console.log( currentSlideIndex, adjusted);
+
+    if ( currentSlideIndex === adjusted ) {
+
+      console.log(4);
+      $(".next-slide").slideUp(100);
 
     }
-    else $("div.next-slide").slideDown();
+    else {
+
+      $("div.next-slide").slideDown(100);
+      console.log(5);
+    } 
+
   };
 /* * Hiding and showing of navigation bar based on scrolling up and down * */
   
@@ -225,23 +235,26 @@ $(document).ready(
 
   };
   /* bundle all the scroll events together */
+  var throttle = 0; 
   var scrollHandler = function(e){
-      console.log( window.innerWidth);
-      if ( window.innerWidth >= 650 ) {
-            getCurrentSlide();
-            toggleNextSlide();
-          }
-      else {
+
+      if ( window.innerWidth <= 650 ) {
         determineScrollDirection(e);
+        throttle++;
+        if (throttle % 3 == 0) {
+          getCurrentSlide();
+          toggleNextSlide();
+        }
       }
+
   };
 
 
   $(document).on("scroll", function(e) {scrollHandler(e);});
   
 /* * Scroll-button * */
-      $(".next-slide").on("click", function() {
-
+      $("div.next-slide").on("click", function() {
+        console.log(1)
         //update what is considered the current slide
         getCurrentSlide();
         // handler for if it's the last slide
