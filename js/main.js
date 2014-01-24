@@ -4,8 +4,8 @@ $(document).ready(
   (function() {
       console.log("Wow. Hi.")
 
-      var h = $(window).height(),
-          w = $(window).width(),
+      var h = window.innerHeight,
+          w = window.innerWidth,
           toggleActive = function(e) {
             $(e.target).toggleClass("active");
           },
@@ -24,7 +24,8 @@ $(document).ready(
 
           // only animate if the width of the screen is above 485px
           // contrived for presentation, but doens't need to hurt mobile users
-          if (w >= 485) {
+          if (w >= 650) {
+
             $("div.next-slide").hide();
             $(".hero p span").hide();
             $(".hero h1").hide();
@@ -207,9 +208,7 @@ $(document).ready(
   var lastScrollTop = null;
   var determineScrollDirection = function(e) {
     var scroll = getScrollTop();
-    var isMobile = window.innerWidth <= 770 ? true : false;
 
-    if (!isMobile) return;
     if (lastScrollTop === null) {
       lastScrollTop = scroll;
       return;
@@ -227,9 +226,14 @@ $(document).ready(
   };
   /* bundle all the scroll events together */
   var scrollHandler = function(e){
-      determineScrollDirection(e);
-      getCurrentSlide();
-      toggleNextSlide();
+      console.log( window.innerWidth);
+      if ( window.innerWidth >= 650 ) {
+            getCurrentSlide();
+            toggleNextSlide();
+          }
+      else {
+        determineScrollDirection(e);
+      }
   };
 
 
