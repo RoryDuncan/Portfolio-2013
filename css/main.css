@@ -242,13 +242,17 @@ h5 {font-weight: 400; }
         margin:0 0;
         color: #004;
         font-size:1.5;
-        font-weight:400;
+        font-weight: 400;
     }
     .welcome .hero p {
         margin:0 0;
         font-size:1.25em;
-        line-height: 0.9em;
-        font-weight:300;
+        line-height: 1em;
+        font-weight: 400;
+    }
+
+    .welcome .hero p span {
+        line-height: 1em;
     }
 
 /* * * * WORK  * * * */

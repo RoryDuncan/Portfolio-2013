@@ -18,7 +18,7 @@ $(document).ready(
           collapseAll = function() {
             $(".work ul.expandable li").removeClass("active");
             $(".work p a").removeClass("active");
-          $(".work p a").text("Expand All  [+]");
+            $(".work p a").text("Expand All  [+]");
           };
 
 
