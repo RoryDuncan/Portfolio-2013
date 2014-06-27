@@ -2,7 +2,7 @@
 
 $(document).ready(
   (function() {
-      console.log("Wow. Hi.")
+      console.log("Hello.")
 
       var h = window.innerHeight,
           w = window.innerWidth,
@@ -171,7 +171,7 @@ $(document).ready(
       listed = [epoch, work, skills, about, contact];
 
   var getCurrentSlide = function() {
-    console.log(2);
+    //console.log(2);
 
     var scroll = getScrollTop();
 
@@ -188,18 +188,18 @@ $(document).ready(
   var toggleNextSlide = function() {
 
     var adjusted = listed.length - 2;
-        console.log( currentSlideIndex, adjusted);
+        //console.log( currentSlideIndex, adjusted);
 
     if ( currentSlideIndex === adjusted ) {
 
-      console.log(4);
+      //console.log(4);
       $(".next-slide").slideUp(100);
 
     }
     else {
 
       $("div.next-slide").slideDown(100);
-      console.log(5);
+      //console.log(5);
     } 
 
   };

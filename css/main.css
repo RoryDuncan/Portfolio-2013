@@ -43,11 +43,11 @@ h5 {font-weight: 400; }
     .header-container {
 
         z-index:99999;
-        background-color: #222;
+        background-color: #fcfcfc;
         text-transform: lowercase;
         position:fixed;
         top: 0px;
-        border-bottom:1px solid #222;
+        border-bottom:1px solid #aaa;
         width:100%;
         padding-top: 9px;
         padding-bottom: 10px;
@@ -68,6 +68,9 @@ h5 {font-weight: 400; }
         display:block;
         text-align:left;
         width:80%;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        padding-top: 8px;
     } 
 
     h1.title a,
@@ -76,12 +79,12 @@ h5 {font-weight: 400; }
         line-height: 0.75em;
         position: relative;
         font-weight: 300;
-        color:#eee;
+        color: #555;
         text-decoration: none;
     } 
 
     h1.title a:hover {
-        color:#fff;
+        color:#000;
     } 
 
     nav {
@@ -93,7 +96,7 @@ h5 {font-weight: 400; }
         top:3px;
         right:3px;
         border:1px solid #222;
-        background-color: #222;
+        background-color: #a84a55;
         margin-right:10px;
         border-radius:3px;
         width:35px;
@@ -122,7 +125,7 @@ h5 {font-weight: 400; }
     } 
     
     nav ul {
-        background-color:#222;
+        background-color:#ddd;
         display: none;
         width:100%;
         padding: 0 0;
@@ -151,12 +154,12 @@ h5 {font-weight: 400; }
     } 
 
     nav ul li a {
-        color: #ddd;
+        color: #bbb;
         text-decoration: none;
     } 
 
     nav ul li a:hover {
-        color:#fff;
+        color:#a84a55;
 
         -webkit-transition: color 0.2s linear;
     } 
@@ -166,12 +169,11 @@ h5 {font-weight: 400; }
     div.next-slide {
         display: none; /* not visible for mobile, ends up being in the way and not very smooth transitions */
         opacity: 0.9;
-        border: 4px solid #000;
         background: url("../img/arrow.png") 3px 5px no-repeat transparent;
-        background-size: 60px 60px;
+        background-size: 30px 30px;
         text-align:center;
-        width:65px;
-        height: 65px;
+        width:39px;
+        height: 39px;
         cursor:pointer;
         position:fixed;
         bottom:2%;
@@ -237,7 +239,14 @@ h5 {font-weight: 400; }
     } 
     .welcome .hero {
         cursor:default;
-    } 
+    }
+
+    h1.untitled7 {
+        color: #004 !important;
+    }
+    p.untitled7 {
+        color: #583b15 !important;
+    }
 
     .welcome .hero h1 {
         margin:0 0;
@@ -253,7 +262,7 @@ h5 {font-weight: 400; }
     } 
 
     .welcome .hero p span {
-        line-height: 1em;
+        line-height: 1.15em;
     } 
 
 /* * * * WORK  * * * */
@@ -530,17 +539,18 @@ h5 {font-weight: 400; }
         margin: 0px 0px;
         text-align:inherit;
         font-family: "Lato", Helvetica, "Helvetica Neue", Arial;
-        font-weight:300;
+        font-weight: 400;
         text-decoration: none;
         color: #aaa;
-        display:block;
+        display: block;
         margin:10px 0 10px 0;
         
     } 
 
     .contact ul li a,
     .contact ul li a:visited {
-        font-weight:300;
+        display: block;
+        font-weight: 400;
         color: #0a8;
         text-align:center;
         width:100%;
@@ -555,11 +565,11 @@ h5 {font-weight: 400; }
     .contact ul li input {
 
         font-family: "Lato", Helvetica, "Helvetica Neue", Arial;
-        font-weight:300;
+        font-weight: 400;
         text-align:center;
         border:1px solid #fff;
         border-bottom:1px solid #ddd;
-        font-weight:300;
+
         padding-top: 15px 0px 15px 0px;
     } 
 
